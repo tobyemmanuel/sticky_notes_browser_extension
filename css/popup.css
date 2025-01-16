@@ -1,0 +1,39 @@
+body {
+  width: 300px;
+  padding: 0px 15px 15px 15px;
+  font-family: Arial, sans-serif;
+  background-color: #4aaff7;
+  max-height: 60vw;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.color-picker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.color-option {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+h1 {
+    font-size: 20px;
+}

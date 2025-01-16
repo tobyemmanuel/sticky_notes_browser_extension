@@ -1,0 +1,68 @@
+.sticky-note {
+  position: absolute;
+  width: 250px;
+  min-height: 100px;
+  padding: 10px;
+  background: #ffd75e;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  z-index: 1000000000000000000;
+  resize: both;
+  overflow: auto;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s ease;
+}
+
+.sticky-note:hover {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-note .toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.sticky-note:hover .toolbar {
+  display: flex;
+  gap: 5px;
+}
+
+.sticky-note .info {
+  display: flex;
+  font-size: 10px;
+  position: relative; 
+  justify-content: baseline;
+}
+
+.sticky-note:hover .info {
+  display: none;
+}
+
+.sticky-note .content {
+  outline: 0;
+  margin-top: 25px;
+  min-height: 75px;
+  cursor: text;
+}
+
+.toolbar button {
+  padding: 2px 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.app_image {
+  background-image: url(../icons/app_image.png);
+  background-size: cover;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}

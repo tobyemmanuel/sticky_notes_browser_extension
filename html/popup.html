@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/popup.css" />
+  </head>
+  <body>
+    <h1>Power Sticky Notes</h1>
+    <div class="tabs">
+      <button data-tab="notes">Notes</button>
+      <button data-tab="settings">Settings</button>
+    </div>
+
+    <div id="notes" class="tab-content active">
+      <h3>Notes on this page</h3>
+      <div id="notes-list"></div>
+    </div>
+
+    <div id="settings" class="tab-content">
+      <h3>Settings</h3>
+      <div class="setting">
+        <label>Default Note Color</label>
+        <div class="color-picker">
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../js/popup.js"></script>
+  </body>
+</html>
