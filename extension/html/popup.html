@@ -81,23 +81,45 @@
     </div>
 
     <!-- Sign Up Screen -->
-    <div class="screen signup">
-      <div class="onboarding-content">
-        <h2>Sign Up</h2>
-        <p>Create an account to sync your notes and geek out anywhere.</p>
-        <input type="text" placeholder="Your Name" class="input" />
-        <input type="email" placeholder="Your Email" class="input" />
-        <input type="password" placeholder="Password" class="input" />
-        <input type="password" placeholder="Confirm Password" class="input" />
-        <button class="btn btn-primary">Sign Up</button>
+    <div class="screen auth signup">
+      <div class="auth-content">
+        <img
+          src="../images/stars.png"
+          alt="MarGeek stars"
+          class="stars-image small"
+        />
+        <h2>Sign Up to MarGeek</h2>
+        <div class="card longer">
+          <p class="auth-text">
+            Create an account to sync your notes and geek out anywhere.
+          </p>
+          <div class="login-with-social">
+            <button class="btn btn-social">
+              <img src="../images/google-icon.png" alt="fb" /> Google
+            </button>
+            <button class="btn btn-social">
+              <img src="../images/facebook-icon.png" alt="fb" /> Facebook
+            </button>
+          </div>
+          <div class="login-option">or</div>
+          <div class="login-with-email">
+            <input type="text" placeholder="Your Name" class="input" />
+            <input type="email" placeholder="Your Email" class="input" />
+            <input type="password" placeholder="Password" class="input" />
+            <button class="btn btn-primary">Sign Up</button>
+            <p class="link">
+              Already have an account?
+              <a href="#" class="nav-link" location="signin">Sign In</a>
+            </p>
+          </div>
+        </div>
+        <button class="btn btn-secondary">Offline Mode</button>
       </div>
-      <p class="link">
-        Already have an account? <a href="#" class="nav-link">Log In</a>
-      </p>
+      <p class="version">v1.0.1</p>
     </div>
 
     <!-- Login Screen -->
-    <div class="screen auth login">
+    <div class="screen auth signin">
       <div class="auth-content">
         <img
           src="../images/stars.png"
@@ -110,21 +132,26 @@
             Access your sticky notes across devices—stick it, speak it, snap it!
           </p>
           <div class="login-with-social">
-            <button class="btn btn-social"><img src="../images/google-icon.png" alt="fb"/> Google</button>
-            <button class="btn btn-social"><img src="../images/facebook-icon.png" alt="fb"/> Facebook</button>
+            <button class="btn btn-social">
+              <img src="../images/google-icon.png" alt="fb" /> Google
+            </button>
+            <button class="btn btn-social">
+              <img src="../images/facebook-icon.png" alt="fb" /> Facebook
+            </button>
           </div>
-          <div class="login-option">
-            or
-          </div>
+          <div class="login-option">or</div>
           <div class="login-with-email">
             <input type="email" placeholder="Your Email" class="input" />
             <input type="password" placeholder="Password" class="input" />
-            <a href="#" class="nav-link forgot-password-link"
+            <a
+              href="#"
+              class="nav-link forgot-password-link"
+              location="forgot-password"
               >Forgot Password?</a
             >
             <button class="btn btn-primary">Sign In</button>
             <p class="link">
-              <a href="#" class="nav-link signup-link"
+              <a href="#" class="nav-link signup-link" location="signup"
                 >I do not have an account</a
               >
             </p>
@@ -136,12 +163,24 @@
     </div>
 
     <!-- Forgot Password Screen -->
-    <div class="screen forgot-password">
-      <h2>Reset Your MarGeek Password</h2>
-      <p>Don’t worry—get back to your notes in a snap.</p>
-      <input type="email" placeholder="Your Email" class="input" />
-      <button class="btn btn-primary">Send Reset Link</button>
-      <p class="link"><a href="#" class="nav-link">Back to Log In</a></p>
+    <div class="screen auth forgot-password">
+      <div class="auth-content">
+        <img
+          src="../images/stars.png"
+          alt="MarGeek stars"
+          class="stars-image small"
+        />
+        <h2>Reset Your MarGeek Password</h2>
+        <div class="card">
+          <p class="auth-text">Don’t worry—get back to your notes in a snap.</p>
+          <input type="email" placeholder="Your Email" class="input" />
+          <button class="btn btn-primary">Send Reset Link</button>
+          <p class="link">
+            <a href="#" class="nav-link" location="signin">Back to Sign In</a>
+          </p>
+        </div>
+        <p class="version">v1.0.1</p>
+      </div>
     </div>
 
     <!-- Main Screen (Dashboard) -->
