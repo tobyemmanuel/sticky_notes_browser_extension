@@ -1,29 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarGeek Sticky Notes</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+    />
     <link rel="stylesheet" href="../css/popup.css" />
   </head>
   <body>
-    <h1>Power Sticky Notes</h1>
-    <div class="tabs">
-      <button data-tab="notes">Notes</button>
-      <button data-tab="settings">Settings</button>
-    </div>
-
-    <div id="notes" class="tab-content active">
-      <h3>Notes on this page</h3>
-      <div id="notes-list"></div>
-    </div>
-
-    <div id="settings" class="tab-content">
-      <h3>Settings</h3>
-      <div class="setting">
-        <label>Default Note Color</label>
-        <div class="color-picker">
-        </div>
+    <!-- Landing Screen -->
+    <div class="screen landing active">
+      <div class="landing-content">
+        <img
+          src="../images/stars.png"
+          alt="MarGeek stars"
+          class="stars-image"
+        />
+        <h1>Welcome to MarGeek Sticky Notes</h1>
+        <p>Notes That Stick With You</p>
+        <button class="btn btn-primary">Get Started</button>
+        <img
+          src="../images/sticky-note.png"
+          alt="Sticky Note"
+          class="landing-image"
+        />
       </div>
     </div>
 
-    <script type="module" src="../js/popup.js"></script>
+    <!-- Onboarding Screen 1 -->
+    <div class="screen onboarding-1">
+      <div class="onboarding-content">
+        <a href="#" class="skip-link">Skip</a>
+        <img
+          src="../images/stars.png"
+          alt="MarGeek stars"
+          class="stars-image"
+        />
+        <h1>MarGeek Sticky Notes</h1>
+        <div class="progress-bar">
+          <div class="progress" style="width: 50%"></div>
+        </div>
+        <div class="card">
+          <h3>Meet MarGeek Sticky Notes</h3>
+          <p>
+            Your personal note-taking sidekick—text, voice, or images, stuck
+            where you need them, synced how you like.
+          </p>
+          <button class="btn btn-primary">Next</button>
+        </div>
+        <p class="version">v1.0.1</p>
+      </div>
+    </div>
+
+    <!-- Onboarding Screen 2 -->
+    <div class="screen onboarding-2">
+      <div class="onboarding-content">
+        <a href="#" class="skip-link">Skip</a>
+        <img
+          src="../images/stars.png"
+          alt="MarGeek stars"
+          class="stars-image"
+        />
+        <h2>MarGeek Sticky Notes</h2>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%"></div>
+        </div>
+        <div class="card">
+          <h3>Stick It Anywhere</h3>
+          <p>
+            Add notes to websites, sync them to your phone, and keep your
+            brilliance organized. Ready to geek out?
+          </p>
+          <button class="btn btn-primary">Next</button>
+        </div>
+        <p class="version">v1.0.1</p>
+      </div>
+    </div>
+
+    <!-- Sign Up Screen -->
+    <div class="screen signup">
+      <div class="onboarding-content">
+        <h2>Sign Up</h2>
+        <p>Create an account to sync your notes and geek out anywhere.</p>
+        <input type="text" placeholder="Your Name" class="input" />
+        <input type="email" placeholder="Your Email" class="input" />
+        <input type="password" placeholder="Password" class="input" />
+        <input type="password" placeholder="Confirm Password" class="input" />
+        <button class="btn btn-primary">Sign Up</button>
+      </div>
+      <p class="link">
+        Already have an account? <a href="#" class="nav-link">Log In</a>
+      </p>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="screen auth login">
+      <div class="auth-content">
+        <img
+          src="../images/stars.png"
+          alt="MarGeek stars"
+          class="stars-image small"
+        />
+        <h2>Sign In to MarGeek</h2>
+        <div class="card longer">
+          <p class="auth-text">
+            Access your sticky notes across devices—stick it, speak it, snap it!
+          </p>
+          <div class="login-with-social">
+            <button class="btn btn-social"><img src="../images/google-icon.png" alt="fb"/> Google</button>
+            <button class="btn btn-social"><img src="../images/facebook-icon.png" alt="fb"/> Facebook</button>
+          </div>
+          <div class="login-option">
+            or
+          </div>
+          <div class="login-with-email">
+            <input type="email" placeholder="Your Email" class="input" />
+            <input type="password" placeholder="Password" class="input" />
+            <a href="#" class="nav-link forgot-password-link"
+              >Forgot Password?</a
+            >
+            <button class="btn btn-primary">Sign In</button>
+            <p class="link">
+              <a href="#" class="nav-link signup-link"
+                >I do not have an account</a
+              >
+            </p>
+          </div>
+        </div>
+        <button class="btn btn-secondary">Offline Mode</button>
+        <p class="version">v1.0.1</p>
+      </div>
+    </div>
+
+    <!-- Forgot Password Screen -->
+    <div class="screen forgot-password">
+      <h2>Reset Your MarGeek Password</h2>
+      <p>Don’t worry—get back to your notes in a snap.</p>
+      <input type="email" placeholder="Your Email" class="input" />
+      <button class="btn btn-primary">Send Reset Link</button>
+      <p class="link"><a href="#" class="nav-link">Back to Log In</a></p>
+    </div>
+
+    <!-- Main Screen (Dashboard) -->
+    <div class="screen main-screen">
+      <div class="header">
+        <button class="menu-btn">☰</button>
+        <h1>MarGeek Sticky Note</h1>
+      </div>
+      <p class="subtitle">Stick it, speak it, snap it—your notes, your way!</p>
+      <div class="notes-list">
+        <h3>My Notes</h3>
+        <div class="note">
+          <p>Exploring the Land of Adventure</p>
+          <div class="note-actions">
+            <button class="btn btn-small btn-primary">Edit</button>
+            <button class="btn btn-small btn-delete">Delete</button>
+          </div>
+        </div>
+        <!-- Empty State -->
+        <p class="empty-state">No notes yet. Double-tap a page to start!</p>
+      </div>
+      <div class="action-buttons">
+        <button class="btn btn-primary">New Note</button>
+        <button class="btn btn-primary">🎙️ Record Voice</button>
+        <button class="btn btn-primary">📸 Add Image</button>
+        <button class="btn btn-primary">📷 Snap Screen</button>
+      </div>
+      <div class="sync-status">
+        <p>Local Only</p>
+        <button class="btn btn-small btn-primary">Sync Now</button>
+      </div>
+    </div>
+
+    <!-- Menu Screen -->
+    <div class="screen menu">
+      <button class="close-btn">✕</button>
+      <h2>Menu</h2>
+      <p class="greeting">Hey, User!</p>
+      <button class="btn btn-primary">Notes</button>
+      <button class="btn btn-primary">Account</button>
+      <button class="btn btn-primary">Change Password</button>
+      <button class="btn btn-primary">Support & Feedback</button>
+      <button class="btn btn-primary">Active Devices</button>
+      <button class="btn btn-primary">Settings</button>
+      <button class="btn btn-primary">Log Out</button>
+    </div>
+
+    <script src="../js/popup.js"></script>
   </body>
 </html>

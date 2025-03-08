@@ -158,3 +158,53 @@ function initializeColorPicker() {
       });
     }
   }
+
+  // Screen navigation
+const screens = document.querySelectorAll('.screen');
+const navLinks = document.querySelectorAll('.nav-link');
+const menuBtn = document.querySelector('.menu-btn');
+const closeBtn = document.querySelector('.close-btn');
+
+// Show a specific screen
+function showScreen(screenClass) {
+  screens.forEach(screen => screen.classList.remove('active'));
+  document.querySelector(`.${screenClass}`).classList.add('active');
+}
+
+// Check if first-time user (simulated with local storage for now)
+const isFirstTime = !localStorage.getItem('hasSeenOnboarding');
+if (isFirstTime) {
+  showScreen('landing');
+} else {
+  showScreen('landing');
+  // showScreen('login');
+  // showScreen('login');
+}
+
+// Button navigation
+document.querySelector('.landing .btn-primary').addEventListener('click', () => showScreen('onboarding-1'));
+document.querySelector('.onboarding-1 .btn-primary').addEventListener('click', () => showScreen('onboarding-2'));
+document.querySelector('.onboarding-2 .btn-primary').addEventListener('click', () => {
+  localStorage.setItem('hasSeenOnboarding', 'true');
+  showScreen('login');
+});
+
+// Navigation links
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetScreen = link.textContent.toLowerCase().replace(' ', '-');
+    showScreen(targetScreen);
+  });
+});
+
+// Menu toggle
+menuBtn.addEventListener('click', () => showScreen('menu'));
+closeBtn.addEventListener('click', () => showScreen('main-screen'));
+
+// Menu buttons
+document.querySelector('.menu .btn:nth-child(2)')?.addEventListener('click', () => showScreen('main-screen')); // Notes
+document.querySelector('.menu .btn:last-child').addEventListener('click', () => {
+  localStorage.removeItem('authToken');
+  showScreen('login');
+}); // Log Out
